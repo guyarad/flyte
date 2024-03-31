@@ -1031,7 +1031,7 @@ func TestToK8sPod(t *testing.T) {
 	t.Run("environmentVariables", func(t *testing.T) {
 		assert.NoError(t, config.SetK8sPluginConfig(&config.K8sPluginConfig{
 			DefaultEnvVars: map[string]string{
-				"foo": "bar",
+				"FOO": "bar",
 			},
 		}))
 		x := dummyExecContext(dummyTaskTemplate(), &v1.ResourceRequirements{}, nil, "")
